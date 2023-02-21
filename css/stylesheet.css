@@ -40,6 +40,10 @@
     text-transform: uppercase;
 }
 
+#link_list a:hover{
+    cursor: pointer;
+}
+
 /* #burger div{
     width: 25px;
     height: 3px;
@@ -77,23 +81,46 @@ nav{
 header{
     grid-area: he;
     background-color: rgb(68, 40, 19);
-    height: 100px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content:center;
 }
 
-#header_logo{
+#header_text{
+    width: 430px;
+    height: 90px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: 0.148rem;
+    letter-spacing: 0.348rem;
     color: #210082;
+    font-family:'SNICN';
     font-weight: bold;
     font-size: 6rem;
-    font-family:'SNICN';
     text-transform: uppercase;
     background-color: white;
-    background-color: #fff;
-    border-radius: 1.5px;
-    border:red solid;
-    width: 21rem;
+    border-radius: 28px 1px;
+    border:red solid 5px;
+    text-shadow: -3px 0 1px rgb(255, 255, 255), -3.5px 0 1px #210082 ;
+}
+
+#section_1{
+    width: 100%;
+    height: 500px;
+    background-color: purple;
+}
+
+#section_2{
+    width: 100%;
+    height: 500px;
+    background-color: orange;
+}
+
+#footer{
+    width: 100%;
+    height: 250px;
+    background-color: blue;
 }
