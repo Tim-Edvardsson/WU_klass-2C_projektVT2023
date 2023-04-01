@@ -78,11 +78,11 @@ nav{
 }
 
 #about{
-    border-radius: 1px 10px;
+    border-radius: 10px 10px;
 }
 
 #ask{
-    border-radius: 10px;
+    border-radius: 1px 10px;
 }
 
 header{
@@ -247,18 +247,21 @@ header{
     width: 33%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.footer_text{
-    margin: 10px;
-    color: #fff;
-    text-decoration: none;
+#footer_margin{
+    height: 100%;
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5%;
 }
 
-.footer_text:hover{
-    cursor: pointer;
+.footer_text{
+    color: #fff;
+    text-decoration: none;
 }
 
 #middle{
@@ -304,12 +307,8 @@ header{
     color: #fff;
 }
 
-.footer_middle:hover{
-    cursor: pointer;
-}
-
 #your_email_text{
-    color: #6F2F79;
+    color: #000000;
 }
 
 #your_email_text:hover{
@@ -321,18 +320,34 @@ header{
     width: 33%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: #210082;
+}
+
+#footer_right_center{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .right_text{
-    color: #fff;
     margin: 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
-#contact:hover{
-    cursor: pointer;
+#img_logo_container{
+    width: 100px;
+    height: 100px;
 }
+
+#img_logo_footer{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 #burger{
     display: none;
@@ -500,29 +515,36 @@ header{
 #info_snickers{
     background-color:rgb(111, 47, 121, 1) ;
     height: 800px;
+}
+
+#info_snicker_container{
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 #img_snickers_original{
-    opacity: 100%;
     display: flex;
-    align-items: center;
+    position: relative;
+    left: 30px;
     
 }
 
 #snickers_info_text{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    position: relative;
+    right: 120px;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 670px;
+    width: 650px;
     font-size: 1.8rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ffffff;
     font-weight: bold;
-    letter-spacing: 0.348rem;
+    letter-spacing: 0.48rem;
 }
 
 #bracket_left{
@@ -541,14 +563,7 @@ header{
     right: 70px;
 }
 
-#quote_btn{
-    background-color: rgb(68, 40, 19);
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
+
 
 #quote{
     display: flex;
@@ -596,12 +611,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#button_ask_us{
     position: relative;
     top: 280px;
-    right: 80px;
+    right: 90px;
+
 }
 
 #button_ask_us:hover{
