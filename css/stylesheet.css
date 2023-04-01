@@ -32,7 +32,6 @@
     background-color: #fff;
     border-radius: 1.5px;
     border:red solid;
-
 }
 
 #link_list a{
@@ -146,6 +145,7 @@ nav{
     flex-direction:row-reverse;
     justify-content:space-evenly;
     align-items: center;
+    z-index: -2;
 }
 
 #new_flavour_text{
@@ -429,7 +429,7 @@ nav{
     background-color: #fffdd0;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -482,7 +482,7 @@ nav{
     align-items: center;
     height: 100%;
     transform-style: preserve-3d;
-    z-index: -1;
+    z-index: -2;
 }
 
 #background_parallax{
@@ -490,7 +490,7 @@ nav{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
     transform: translateZ(-9.9px) scale(2);
 }
 
@@ -498,13 +498,14 @@ nav{
     font-size: 7rem;
     color: rgb(68, 40, 19);
     text-shadow: 0 0 5px black;
-    z-index: -1;
+    z-index: -2;
     transform: translateZ(-5px) scale(1.3);
 }
 
 #info_snickers{
     background-color:rgb(111, 47, 121, 1) ;
     height: 800px;
+    display: flex;
 }
 
 #info_snicker_container{
@@ -519,22 +520,36 @@ nav{
     display: flex;
     position: relative;
     left: 30px;
-    
+    width: 800px;
+}
+
+#snickers_img_info{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #snickers_info_text{
     display: flex;
     align-items: center;
     position: relative;
-    right: 120px;
+    right: -150px;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 650px;
+    width: 700px;
     font-size: 1.8rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ffffff;
     font-weight: bold;
     letter-spacing: 0.48rem;
+    color: #fffdd0;
+}
+
+#button_ask_us_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 270px;
+    left: -900px;
 }
 
 #bracket_left{
@@ -597,16 +612,6 @@ nav{
     }
 } */
 
-#button_ask_us_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 280px;
-    right: 90px;
-
-}
-
 #button_ask_us:hover{
     background-color: #eca833;
     transition: 0.4s ease;
@@ -614,6 +619,13 @@ nav{
 
 #snickers_img_3{
     display: none;
+}
+
+
+#quote_box{
+    display: flex;
+    text-indent: 20px;
+    flex-direction: row;
 }
 
 @media screen and (max-width: 845px){
@@ -695,7 +707,8 @@ nav{
     }
 
     #header{
-        z-index: 3;
+        z-index: 2;
+        position: relative;
     }
 
     #section_1{
@@ -735,8 +748,11 @@ nav{
         justify-content: space-around;
         list-style: none;
         transition: all 0.5s;
-        z-index: 2;
+        z-index: 0;
     }
+    
+
+
 
     #section_2{
         flex-direction: column-reverse;
@@ -769,6 +785,46 @@ nav{
         "sh"
         ;
     }
+
+    #nav{
+        height: 0;
+    }
+    
+    #quote_box{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #quote{
+        font-size: 3rem;
+    }
+
+    #info_snicker_container{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    #img_snickers_original{
+        left: 0px;
+        width: 700px;
+    }
+    
+    #snickers_info_text{
+        right: 0px;
+        width: 700px;
+        font-size: 1.5rem;
+        text-align:center;
+    }
+    
+    #button_ask_us_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
 
     @media screen and (max-width: 760px){
 

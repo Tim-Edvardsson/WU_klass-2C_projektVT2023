@@ -14,16 +14,22 @@
 
         <div class="wrapper_parallax">
 
-            <header>
+            <header id="header">
 
                 <div id="header_logo">
                     <p id="header_text">Snickers</p>
                 </div>
-    
+
+                <div id="burger">
+                    <div id="burger_line_1" class="burger_lines"></div>
+                    <div id="burger_line_2" class="burger_lines"></div>
+                    <div id="burger_line_3" class="burger_lines"></div>
+                </div>
+
             </header>
-    
-        <nav>
-    
+
+            <nav id="nav">
+
             <ul id="link_list">
                 <div class="link_background" id="home">
                     <li><a href="index.html">Hem</a></li>
@@ -38,20 +44,13 @@
                     <li><a href="ask.html">Ask Us</a></li>
                 </div>
             </ul>
-    
-            <div id="burger">
-                <div id="burger_line_1"></div>
-    
-                <div id="burger_line_2"></div>
-    
-                <div id="burger_line_3"></div>
-            </div>
-    
-        </nav>
+
+            </nav>
 
             <section id="section_parallax">
                 <video autoplay loop muted plays-inline src="vid/snickers-62051.mp4" id="background_parallax"></video>
                 <h1 class="title_parallax">
+
                     <div id="quote">
                         <div id="bracket_left">
                             <p>
@@ -59,8 +58,12 @@
                             </p>
                         </div>
                 
-                        <div>
-                            <p id=quote data-text="'You're not you when you're hungry'">'You're not you when you're hungry'</p>
+                        <div id="quote_box">
+                            <p class="quote" data-text="'You're not you when you're hungry'">'You're not you</p>
+
+                            <p>
+                                when you're hungry'
+                            </p>
                         </div>
                 
                         <div id="bracket_right">
@@ -68,6 +71,7 @@
                                 [
                             </p>
                         </div>
+                        
                     </div>
                 </h1>
             </section>
@@ -79,20 +83,19 @@
             <div id="info_snicker_container">
 
             <div id="img_snickers_original">
-                <img src="img/kindpng_about.png" alt="image on snickers">
+                <img id="snickers_img_info" src="img/kindpng_about.png" alt="image on snickers">
             </div>
 
-            <div id="button_ask_us_container">
-                <a href="#" class="btn">Ask Us</a>
-            </div>
+                <div id="snickers_info_text">
+                    <p>
+                        Snickers is a chocolate bar consisting of nougat topped with caramel and peanuts, and all encased in milk chocolate. 
+                        The bars are made by the American company Mars, Inc. The annual global sales of Snickers was over $3 billion as of 2012.
+                    </p>
+                </div>
 
-            <div id="snickers_info_text">
-                <p>
-                    Snickers is a chocolate bar consisting of nougat topped with caramel and peanuts, and all encased in milk chocolate. 
-                    
-                    The bars are made by the American company Mars, Inc. The annual global sales of Snickers was over $3 billion as of 2012.
-                </p>
-            </div>
+                <div id="button_ask_us_container">
+                    <a href="ask.html" class="btn">Ask Us</a>
+                </div>
 
             </div>
 
@@ -163,6 +166,8 @@
         </div>
 
     </div>
+
+    <script src="js/script.js"></script>
     
 </body>
 </html>
