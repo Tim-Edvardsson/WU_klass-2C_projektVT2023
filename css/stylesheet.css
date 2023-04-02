@@ -17,7 +17,7 @@
 
 #grid_wrapper{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 150px 40px 500px 500px 100px;
     grid-template-areas:
     "he"
@@ -63,7 +63,7 @@ nav{
     align-items: center;
     height: 100px;
     width: 100%;
-    top: 0px;
+    top: 0;
     flex-direction: row;
     list-style: none;
     z-index: 0;
@@ -154,7 +154,7 @@ nav{
     color: #fff;
     position: relative;
     right: 5%;
-    -webkit-text-stroke: 0vw;
+    -webkit-text-stroke: 0;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -167,7 +167,7 @@ nav{
     width: 0;
     height: 100%;
     color: #E5AC49;
-    -webkit-text-stroke: 0vw;
+    -webkit-text-stroke: 0;
     overflow: hidden;
     animation: animate 5s linear infinite;
 }
@@ -197,7 +197,7 @@ nav{
     background-color: #eca833;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }
@@ -278,7 +278,7 @@ nav{
     display: flex;  
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 5%;
 }
 
@@ -373,7 +373,7 @@ nav{
 
 #grid_wrapper_2{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 150px 40px auto 100px;
     grid-template-areas:
     "he"
@@ -399,7 +399,7 @@ nav{
     height: 1200px;
     display: grid;
     background-color: #fffdd0;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 10% 90%;
     grid-template-areas:
     "te"
@@ -430,7 +430,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -443,7 +443,7 @@ nav{
     display: flex;
     flex-direction:column;
     transition: 0.6s ease;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.8);
 }
 
 .cards:hover{
@@ -503,7 +503,7 @@ nav{
 }
 
 #info_snickers{
-    background-color:rgb(111, 47, 121, 1) ;
+    background-color:rgb(111, 47, 121) ;
     height: 800px;
     display: flex;
 }
@@ -537,7 +537,6 @@ nav{
     width: 700px;
     font-size: 1.8rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
     font-weight: bold;
     letter-spacing: 0.48rem;
     color: #fffdd0;
@@ -575,13 +574,12 @@ nav{
     font-size: 5rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: center;
-    justify-content: space-evenly;
     color: #fffdd0;
     flex-direction: row-reverse;
     position: relative;
     font-weight: bold;
     letter-spacing: 0.348rem;
-    -webkit-text-stroke: 0vw;
+    -webkit-text-stroke: 0;
     white-space: nowrap;
     text-transform: uppercase;
 }
@@ -594,7 +592,7 @@ nav{
     width: 0;
     height: 100%;
     color: #6F2F79;
-    -webkit-text-stroke: 0vw;
+    -webkit-text-stroke: 0;
     overflow: hidden;
     animation: animate 10s linear infinite;
     text-transform: uppercase;
@@ -681,7 +679,7 @@ nav{
 
     #grid_wrapper{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 150px 500px 500px 100px;
         grid-template-areas:
         "he"
@@ -693,7 +691,7 @@ nav{
 
     #grid_wrapper_2{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 150px 2400px 100px;
         grid-template-areas:
         "he"
@@ -741,7 +739,7 @@ nav{
         width: 200px;
         position: absolute;
         top: -300px;
-        right: 0px;
+        right: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -750,9 +748,6 @@ nav{
         transition: all 0.5s;
         z-index: 0;
     }
-    
-
-
 
     #section_2{
         flex-direction: column-reverse;
@@ -778,7 +773,7 @@ nav{
         height: 2400px;
         display: grid;
         background-color: #fffdd0;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 10% 90%;
         grid-template-areas:
         "te"
@@ -805,12 +800,12 @@ nav{
     }
     
     #img_snickers_original{
-        left: 0px;
+        left: 0;
         width: 700px;
     }
     
     #snickers_info_text{
-        right: 0px;
+        right: 0;
         width: 700px;
         font-size: 1.5rem;
         text-align:center;
@@ -821,12 +816,17 @@ nav{
         align-items: center;
         justify-content: center;
         position: relative;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
     }
+    
 
 
     @media screen and (max-width: 760px){
+
+        /* #link_list{
+            right: -130px;
+        } */
 
         #grid_wrapper_2{
             display: grid;
@@ -841,11 +841,11 @@ nav{
 
         #main{
             grid-area: ma;
-            width: 100%;
+            width: 1fr;
             height: 4800px;
             display: grid;
             background-color: #fffdd0;
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-template-rows: 10% 90%;
             grid-template-areas:
             "te"
@@ -854,11 +854,42 @@ nav{
         }
 
         #text_main{
-            font-size: 4rem;
+            font-size: 3rem;
         }
 
-        /* #burger{
-            left: 12%;
-        } */
+        #burger{
+            left: 7%;
+        }
+
+        #quote{
+            font-size: 20px;
+        }
+
+        #bracket_left{
+            font-size: 100px;
+            left: 5px;
+        }
+
+        #bracket_right{
+            font-size: 100px;
+            right: 5px;
+        }
+        
+        #img_snickers_original{
+            left: 0;
+            width: 350px;
+        }
+        
+        #snickers_info_text{
+            right: 0;
+            width: 350px;
+            font-size: 1.2rem;
+            text-align:center;
+        }
+
+        #grid_wrapper{
+            grid-template-columns: 1fr;
+        }
+
     }
 }
