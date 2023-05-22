@@ -805,7 +805,7 @@ nav{
 @media screen and (max-width: 845px){
 
     .text_sec_card{
-        z-index: 0;
+        z-index:unset;
     }
 
     .sec_card{
