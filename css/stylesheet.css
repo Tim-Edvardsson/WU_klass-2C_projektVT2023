@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'SNICN';
-    src: url('fonts/snickers.ttf') format('truetype');
+    src: url(../fonts/snickers.ttf) format('truetype');
 }
 
 *{
@@ -80,13 +80,14 @@ nav{
 }
 
 #header{
+    height: 100%;
     width: 100%;
     grid-area: he;
     background-color: rgb(68, 40, 19);
     height: 150px;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content:space-evenly;
 }
 
 #header_text{
@@ -115,7 +116,6 @@ nav{
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
     cursor: pointer;
 }
 
@@ -143,14 +143,14 @@ nav{
 }
 
 #new_flavour_text{
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
     position: relative;
     right: 5%;
     -webkit-text-stroke: 0;
     text-transform: uppercase;
-    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 #new_flavour_text::before{
@@ -178,10 +178,15 @@ nav{
     }
 }
 
-#bild_brownie{
-    height: 250px;
+.bild_brownie{
+    height: 180px;
     position: relative;
     right: 5%;
+}
+
+.bild_brownies{
+    height: 100px;
+    position: relative;
 }
 
 #section_2{
@@ -279,6 +284,7 @@ nav{
 .footer_text{
     color: #fff;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
 #middle{
@@ -389,7 +395,7 @@ nav{
 #main{
     grid-area: ma;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: grid;
     background-color: #fffdd0;
     grid-template-columns: 100%;
@@ -420,6 +426,8 @@ nav{
 
 #main_cards{
     grid-area: sh;
+    width: 100%;
+    height: 100%;
     background-color: #fffdd0;
     display: flex;
     flex-wrap: wrap;
@@ -521,18 +529,25 @@ nav{
     max-height: 100%;
 }
 
+#snickers_info_text_top{
+    font-size: 2rem;
+    font-weight:bold;
+    color: #fffdd0;
+    text-align: left;
+    margin-bottom: 3%;
+    text-decoration: underline;
+}
+
 #snickers_info_text{
     display: flex;
-    align-items: center;
     position: relative;
     right: -150px;
-    flex-direction: row;
+    flex-direction: column;
     width: 700px;
     font-size: 1.8rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
     letter-spacing: 0.48rem;
-    color: #fffdd0;
+    color: #ffffff;
 }
 
 #button_ask_us_container{
@@ -620,7 +635,7 @@ nav{
 #grid_wrapper_4{
     display: grid;
     grid-template-columns: 33%, 34%, 33%;
-    grid-template-rows: 150px 40px 200px 70vh 100px;
+    grid-template-rows: 150px 40px 200px 80vh 100px;
     grid-template-areas:
     "he he he"
     "na na na"
@@ -680,11 +695,80 @@ nav{
     text-decoration:underline;
 }
 
-#text_sec_card_long{
+.text_sec_card_left{
+    font-size: 1.6rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fffdd0;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.348rem;
+    z-index: 0;
+    text-align: left;
+    margin-left: 1%;
+}
+
+.text_sec_card_right{
+    font-size: 1.6rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fffdd0;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.348rem;
+    z-index: 0;
+    text-align: right;
+    margin-right: 1%;
+}
+
+.text_sec_card_middle{
+    font-size: 1.6rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fffdd0;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.348rem;
+    z-index: 0;
+    text-align: center;
+}
+
+.text_sec_card_long_left{
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #f5f5f5;
     text-decoration: none;
+    text-align:left;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.348rem;
+    z-index: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 1%;
+}
+
+.text_sec_card_long_middle{
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+    text-decoration: none;
+    text-align:center;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.348rem;
+    z-index: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text_sec_card_long_right{
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+    text-decoration: none;
+    text-align:right;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.348rem;
+    z-index: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 1%;
 }
 
 #text_sec_card_long_2{
@@ -705,8 +789,7 @@ nav{
     position: relative;
     height: 580px;
     background-color: rgb(68, 40, 19);
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -767,6 +850,7 @@ nav{
     background-color: #fffdd0;
     border-radius: 1px;
     border: double;
+
 }
 
 #section_left{
@@ -774,6 +858,7 @@ nav{
 }
 
 #section_left_card{
+    height: 90%;
     width: 80%;
     border-radius: 50px 20px 10px 10px;
 }
@@ -783,6 +868,7 @@ nav{
 }
 
 #section_middle_card{
+    height: 90%;
     width: 80%;
     border-radius: 50px 50px 10px 10px;
 }
@@ -792,6 +878,7 @@ nav{
 }
 
 #section_right_card{
+    height: 90%;
     width: 80%;
     border-radius: 20px 50px 10px 10px;
 }
@@ -804,12 +891,27 @@ nav{
 
 @media screen and (max-width: 845px){
 
-    .text_sec_card{
-        z-index:unset;
+    #tjanster{
+        font-size: smaller;
+    }
+
+    #FAQ{
+        font-size: smaller;
+    }
+
+    #kontakt{
+        font-size: smaller;
+    }
+
+    #button_products{
+        height: 0px;
+        width: 0px;
+        align-items: center;
     }
 
     .sec_card{
         position:unset;
+        justify-content:space-evenly;
     }
 
     #section_middle_card:hover::before{
@@ -826,7 +928,6 @@ nav{
 
     #burger{
         display: block;
-        margin-left: -20px;
     }
     
     .burger_in_x_form #burger_line_2{
@@ -851,12 +952,20 @@ nav{
     
     #burger{
         transition: all 0.5s;
-        justify-content: flex-end;
+    }
+
+    #card_8{
+        width: 23rem;
+    }
+
+    #header_text{
+        width: 300px;
+        height: 70px;
+        font-size: 4rem;
     }
 
     #header_logo{
-        justify-content: flex-end;
-        margin: 10%;
+        display: flex;
     }
     
     .burger_lines{
@@ -899,6 +1008,7 @@ nav{
     }
 
     #section_1{
+        width: inherit;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -906,11 +1016,20 @@ nav{
     }
 
     #new_flavour_text{
+        font-size: 3rem;
         position: relative;
         right: 0;
     }
 
-    #bild_brownie{
+    .bild_brownie{
+        height: 100px;
+        position: relative;
+        right: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .bild_brownies{
         position: relative;
         right: 0;
         max-width: 100%;
@@ -918,7 +1037,6 @@ nav{
     }
 
     #brownie_container{
-        width: 700px;
         height: 200px;
     }
 
@@ -931,7 +1049,7 @@ nav{
         height: 300px;
         width: 200px;
         position: absolute;
-        right: 0;
+        left: 0;
         top: -250px;
         display: flex;
         flex-direction: column;
@@ -942,7 +1060,10 @@ nav{
     }
 
     #section_2{
+        width: 100%;
         flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
     }
 
     #snickers_img_2{
@@ -955,14 +1076,12 @@ nav{
 
     #snickers_img_3{
         display: block;
-        position: relative;
-        top: 100px;
     }
 
     #main{
         grid-area: ma;
         width: 100%;
-        height: 2400px;
+        height: 100%;
         display: grid;
         background-color: #fffdd0;
         grid-template-columns: 100%;
@@ -996,6 +1115,13 @@ nav{
         left: 0;
         width: 700px;
     }
+
+    #snickers_info_text_top{
+        right: 0;
+        width: 700px;
+        font-size: 1.7rem;
+        text-align:center;
+    }
     
     #snickers_info_text{
         right: 0;
@@ -1024,30 +1150,50 @@ nav{
 
     .text_sec_card{
         font-size: 1.5rem;
+        z-index: unset;
     }
     
-    #text_sec_card_long{
+
+    .text_sec_card_left{
         font-weight: normal;
-        font-size: 1rem;
-        color: #f5f5f5;
+        font-size: 1.2rem;
+        flex-wrap: wrap;
     }
 
-    #text_sec_card_long_2{
+    .text_sec_card_middle{
         font-weight: normal;
-        font-size: 1rem;
-        color: #f5f5f5;
+        font-size: 1.2rem;
+        flex-wrap: wrap;
     }
 
-    #text_sec_card_long_3{
+    .text_sec_card_right{
+        font-weight: normal;
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .text_sec_card_long_left{
         font-weight: normal;
         font-size: 1rem;
-        color: #f5f5f5;
+        word-wrap: break-word;
+    }
+
+    .text_sec_card_long_middle{
+        font-weight: normal;
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+
+    .text_sec_card_long_right{
+        font-weight: normal;
+        font-size: 1rem;
+        word-wrap: break-word;
     }
 
     #grid_wrapper_4{
         display: grid;
         grid-template-columns: 33%, 34%, 33%;
-        grid-template-rows: 150px 200px 70vh 100px;
+        grid-template-rows: 150px 200px 85vh 100px;
         grid-template-areas:
         "he he he"
         "setk setk setk"
@@ -1056,7 +1202,65 @@ nav{
         ;
     }
 
+    #middle{
+        display: none;
+    }
+
+    .section_ask{
+        height: 100%;
+    }
+
     @media screen and (max-width: 760px){
+
+        #grid_wrapper_4{
+            display: grid;
+            grid-template-columns: 33%, 34%, 33%;
+            grid-template-rows: 150px 200px 105vh 100px;
+            grid-template-areas:
+            "he he he"
+            "setk setk setk"
+            "sel sem ser"
+            "fo fo fo"
+            ;
+        }
+
+        .text_sec_card_left{
+            font-weight: normal;
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+        }
+    
+        .text_sec_card_middle{
+            font-weight: normal;
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+        }
+    
+        .text_sec_card_right{
+            font-weight: normal;
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .text_sec_card{
+            font-size: 1rem;
+            z-index: unset;
+        }
+
+        .text_sec_card_long_left{
+            font-weight: normal;
+            font-size: 0.7rem;
+        }
+    
+        .text_sec_card_long_middle{
+            font-weight: normal;
+            font-size: 0.7rem;
+        }
+    
+        .text_sec_card_long_right{
+            font-weight: normal;
+            font-size: 0.7rem;
+        }
 
         /* #link_list{
             right: -130px;
@@ -1074,12 +1278,12 @@ nav{
 
         #main{
             grid-area: ma;
-            width: 1fr;
+            width: 100%;
             height: 4800px;
             display: grid;
             background-color: #fffdd0;
             grid-template-columns: 100%;
-            grid-template-rows: 10% 90%;
+            grid-template-rows: 5% 95%;
             grid-template-areas:
             "te"
             "sh"
@@ -1114,6 +1318,13 @@ nav{
             left: 0;
             width: 350px;
         }
+
+        #snickers_info_text_top{
+            right: 0;
+            width: 350px;
+            font-size: 1.4rem;
+            text-align:center;
+        }
         
         #snickers_info_text{
             right: 0;
@@ -1124,6 +1335,18 @@ nav{
 
         #grid_wrapper{
             grid-template-columns: 1fr;
+        }
+
+        #tjanster{
+            font-size:x-small;
+        }
+    
+        #FAQ{
+            font-size:x-small;
+        }
+    
+        #kontakt{
+            font-size:x-small;
         }
 
     }
