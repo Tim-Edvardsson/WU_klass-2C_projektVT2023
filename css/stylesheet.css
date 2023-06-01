@@ -55,7 +55,6 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100px;
     width: 100%;
     top: 0;
     flex-direction: row;
@@ -64,18 +63,34 @@ nav{
 }
 
 #home{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: fit-content;
     border-radius: 10px 1px;
 }
 
 #shop{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: fit-content;
     border-radius: 10px 10px;
 }
 
 #about{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: fit-content;
     border-radius: 10px 10px;
 }
 
 #ask{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: fit-content;
     border-radius: 1px 10px;
 }
 
@@ -143,6 +158,9 @@ nav{
 }
 
 #new_flavour_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4.5rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
@@ -151,6 +169,7 @@ nav{
     -webkit-text-stroke: 0;
     text-transform: uppercase;
     flex-wrap: wrap;
+    white-space:nowrap;
 }
 
 #new_flavour_text::before{
@@ -393,26 +412,20 @@ nav{
 }
 
 #main{
+    width:fit-content;
+    height:fit-content;
     grid-area: ma;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    background-color: #fffdd0;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 80% 10%;
-    grid-template-areas:
-    "te"
-    "sh"
-    "fo"
-    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #main_text{
-    grid-area: te;
     background-color: #fffdd0;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100px;
 }
 
 #text_main{
@@ -425,7 +438,6 @@ nav{
 }
 
 #main_cards{
-    grid-area: sh;
     width: 100%;
     height: 100%;
     background-color: #fffdd0;
@@ -436,9 +448,86 @@ nav{
     align-items: center;
 }
 
+.text_cards_nutritioun{
+    font-size: 1.1rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    text-decoration:underline;
+    font-weight:normal;
+    letter-spacing: 0.348rem;
+    text-align: center;
+}
+
+.text_cards_center{
+    width: 100%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: 40%;
+}
+
+#card_bottom_fix{
+    bottom:10%;
+}
+
+#card_bottom_fix_3{
+    bottom:20%;
+}
+
+#card_bottom_fix{
+    bottom:10%;
+}
+
+#card_bottom_fix_6{
+    bottom:15%;
+}
+
 .cards{
     width: 24rem;
-    height: 520px;
+    height: 580px;
+    background-color: rgb(68, 40, 19);
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    transition: 0.6s ease;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.8);
+    margin: 1%;
+}
+
+.cards_2{
+    width: 24rem;
+    height: 580px;
+    background-color: rgb(68, 40, 19);
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    transition: 0.6s ease;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.8);
+    margin: 1%;
+}
+
+.cards_3{
+    width: 24rem;
+    height: 580px;
+    background-color: rgb(68, 40, 19);
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    transition: 0.6s ease;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.8);
+    margin: 1%;
+}
+
+.cards_4{
+    width: 24rem;
+    height: 580px;
     background-color: rgb(68, 40, 19);
     align-items: center;
     justify-content: space-evenly;
@@ -453,6 +542,18 @@ nav{
     background-color: #6F2F79;
 }
 
+.cards_2:hover{
+    background-color:#cf9a3e;
+}
+
+.cards_3:hover{
+    background-color:#1b006a;
+}
+
+.cards_4:hover{
+    background-color:rgb(142, 0, 0);
+}
+
 .text_card{
     font-size: 2rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -463,10 +564,6 @@ nav{
     text-align: center;
     position: relative;
     top: 6%;
-}
-
-#footer{
-    grid-area: fo;
 }
 
 .wrapper_parallax{
@@ -505,12 +602,11 @@ nav{
 
 #info_snickers{
     background-color:rgb(111, 47, 121) ;
-    height: 800px;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 50px;
 }
 
 #info_snicker_container{
@@ -521,12 +617,79 @@ nav{
     width: 100%;
 }
 
+#snickers_img_olds{
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: -20%;
+}
+
+#img_snickers_old{
+    /* width: 800px; */
+}
+
 #info_snicker_container_2{
-    height: 30%;
+    height:800px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
+}
+
+#info_snicker_container_5{
+    height:800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#snickers_info_text_2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 750px;
+    font-size: 1.8rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.48rem;
+    color: #ffffff;
+}
+
+#snickers_info_text_2_2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 750px;
+    font-size: 1.8rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.48rem;
+    color: #ffffff;
+}
+
+#images_history_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 30%;
+}
+
+
+#img_snickers_horse{
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 30%;
+}
+
+#snickers_info_text_top_2{
+    width: 100%;
+    font-size: 2rem;
+    font-weight:bold;
+    color: #fffdd0;
+    text-align: left;
+    text-decoration: underline;
 }
 
 #img_snickers_original{
@@ -548,6 +711,13 @@ nav{
     text-align: left;
     margin-bottom: 3%;
     text-decoration: underline;
+}
+
+#info_snicker_container_3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
 }
 
 #snickers_info_text{
@@ -645,7 +815,7 @@ nav{
 #grid_wrapper_4{
     display: grid;
     grid-template-columns: 33%, 34%, 33%;
-    grid-template-rows: 150px 40px 200px 80vh 100px;
+    grid-template-rows: 150px 40px 200px 110vh 100px;
     grid-template-areas:
     "he he he"
     "na na na"
@@ -695,7 +865,7 @@ nav{
 }
 
 .text_sec_card{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fffdd0;
     line-height: 1;
@@ -705,10 +875,18 @@ nav{
     text-decoration:underline;
 }
 
+#icon_container_max{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 30%;
+}
+
 .text_sec_card_left{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fffdd0;
+    color: #000000;
     line-height: 1;
     font-weight: bold;
     letter-spacing: 0.348rem;
@@ -718,7 +896,7 @@ nav{
 }
 
 .text_sec_card_right{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fffdd0;
     line-height: 1;
@@ -730,9 +908,9 @@ nav{
 }
 
 .text_sec_card_middle{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fffdd0;
+    color: #000000;
     line-height: 1;
     font-weight: bold;
     letter-spacing: 0.348rem;
@@ -742,7 +920,7 @@ nav{
 
 .text_sec_card_long_left{
     font-weight: normal;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #f5f5f5;
     text-decoration: none;
     text-align:left;
@@ -756,7 +934,7 @@ nav{
 
 .text_sec_card_long_middle{
     font-weight: normal;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #f5f5f5;
     text-decoration: none;
     text-align:center;
@@ -769,8 +947,8 @@ nav{
 
 .text_sec_card_long_right{
     font-weight: normal;
-    font-size: 1.3rem;
-    color: #f5f5f5;
+    font-size: 1rem;
+    color: #000000;
     text-decoration: none;
     text-align:right;
     line-height: 1;
@@ -784,14 +962,14 @@ nav{
 #text_sec_card_long_2{
     font-weight: normal;
     font-size: 1.5rem;
-    color: #f5f5f5;
+    color: #000000;
     text-decoration: none;
 }
 
 #text_sec_card_long_3{
     font-weight: normal;
     font-size: 1.5rem;
-    color: #f5f5f5;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -799,7 +977,7 @@ nav{
     position: relative;
     height: 580px;
     background-color: rgb(68, 40, 19);
-    justify-content: space-around;
+    justify-content: space-evenly;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -871,6 +1049,7 @@ nav{
     height: 90%;
     width: 80%;
     border-radius: 50px 20px 10px 10px;
+    background-color: #1b006a;
 }
 
 #section_middle{
@@ -881,6 +1060,7 @@ nav{
     height: 90%;
     width: 80%;
     border-radius: 50px 50px 10px 10px;
+    background-color: #ca8d25;
 }
 
 #section_right{
@@ -891,15 +1071,39 @@ nav{
     height: 90%;
     width: 80%;
     border-radius: 20px 50px 10px 10px;
+    background-color: #711601;
 }
 
 #footer{
     grid-area: fo;
 }
 
+#info_snicker_container_5{
+    display: none;
+}
 
+#icon_container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
 
 @media screen and (max-width: 845px){
+
+    #images_history_container{
+        height: fit-content;
+        width: 60%;
+    }
+
+    #info_snicker_container_5{
+        display: block;
+    }
+
+    #info_snicker_container_2{
+        display: none;
+    }
 
     #info_snickers{
         padding-right: 0px;
@@ -972,10 +1176,6 @@ nav{
         transition: all 0.5s;
     }
 
-    #card_8{
-        width: 23rem;
-    }
-
     #header_text{
         width: 300px;
         height: 70px;
@@ -1007,9 +1207,11 @@ nav{
     }
 
     #grid_wrapper_2{
+        width: fit-content;
+        height: 5200px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 150px 2400px 100px;
+        grid-template-rows: 150px auto;
         grid-template-areas:
         "he"
         "ma"
@@ -1054,6 +1256,10 @@ nav{
         max-height: 100%;
     }
 
+    #img_snickers_horse{
+        padding-left: unset;
+    }
+
     #brownie_container{
         height: 200px;
     }
@@ -1096,21 +1302,6 @@ nav{
         display: block;
     }
 
-    #main{
-        grid-area: ma;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        background-color: #fffdd0;
-        grid-template-columns: 100%;
-        grid-template-rows: 10% 90%;
-        grid-template-areas:
-        "te"
-        "sh"
-        "fo"
-        ;
-    }
-
     #nav{
         height: 0;
     }
@@ -1128,6 +1319,20 @@ nav{
         flex-direction: column;
         justify-content: space-evenly;
     }
+
+    #info_snicker_container_2{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: fit-content;
+
+    }
+
+    #info_snicker_container_5{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: fit-content;
+
+    }
     
     #img_snickers_original{
         left: 0;
@@ -1138,11 +1343,37 @@ nav{
         font-size: 1.7rem;
         text-align:center;
     }
+
+    #snickers_info_text_top_2{
+        right: 0;
+        font-size: 1.7rem;
+        text-align:center;
+        position: relative;
+        top: 10px;
+    }
     
     #snickers_info_text{
+        width: 750px;
+        right: 0;
+        width: fit-content;
+        font-size: 1.5rem;
+        text-align:center;
+    }
+
+    #snickers_info_text_2{
         right: 0;
         font-size: 1.5rem;
         text-align:center;
+        width: 100%;
+        height: 600px;
+    }
+
+    #snickers_info_text_2_2{
+        right: 0;
+        font-size: 1.5rem;
+        text-align:center;
+        width: 100%;
+        height: 600px;
     }
     
     #button_ask_us_container{
@@ -1164,55 +1395,63 @@ nav{
     }
 
     .text_sec_card{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         z-index: unset;
     }
     
 
     .text_sec_card_left{
+        text-align: center;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: 2rem;
         flex-wrap: wrap;
     }
 
     .text_sec_card_middle{
+        text-align: center;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: 2rem;
         flex-wrap: wrap;
     }
 
     .text_sec_card_right{
+        text-align: center;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: 2rem;
         flex-wrap: wrap;
     }
 
     .text_sec_card_long_left{
+        text-align: center;
         font-weight: normal;
-        font-size: 1rem;
+        font-size: 1.7rem;
         word-wrap: break-word;
     }
 
     .text_sec_card_long_middle{
+        text-align: center;
         font-weight: normal;
-        font-size: 1rem;
+        font-size: 1.7rem;
         word-wrap: break-word;
     }
 
     .text_sec_card_long_right{
+        text-align: center;
         font-weight: normal;
-        font-size: 1rem;
+        font-size: 1.7rem;
         word-wrap: break-word;
     }
 
     #grid_wrapper_4{
         display: grid;
         grid-template-columns: 33%, 34%, 33%;
-        grid-template-rows: 150px 200px 85vh 100px;
+        grid-template-rows: 150px 200px 100vh 100vh 100vh 100px;
         grid-template-areas:
         "he he he"
         "setk setk setk"
-        "sel sem ser"
+        "sel sel sel"
+        "sem sem sem"
+        "ser ser ser"
         "fo fo fo"
         ;
     }
@@ -1230,81 +1469,62 @@ nav{
         #grid_wrapper_4{
             display: grid;
             grid-template-columns: 33%, 34%, 33%;
-            grid-template-rows: 150px 200px 105vh 100px;
+            grid-template-rows: 150px 200px 110vh 110vh 110vh 100px;
             grid-template-areas:
             "he he he"
             "setk setk setk"
-            "sel sem ser"
+            "sel sel sel"
+            "sem sem sem"
+            "ser ser ser"
             "fo fo fo"
             ;
         }
 
+        #grid_wrapper_test{
+            min-width:370px;
+        }
+
         .text_sec_card_left{
             font-weight: normal;
-            font-size: 0.8rem;
+            font-size: 1.5rem;
             flex-wrap: wrap;
         }
     
         .text_sec_card_middle{
             font-weight: normal;
-            font-size: 0.8rem;
+            font-size: 1.5rem;
             flex-wrap: wrap;
         }
     
         .text_sec_card_right{
             font-weight: normal;
-            font-size: 0.8rem;
+            font-size: 1.5rem;
             flex-wrap: wrap;
         }
 
         .text_sec_card{
-            font-size: 1rem;
+            font-size: 2rem;
             z-index: unset;
         }
 
         .text_sec_card_long_left{
             font-weight: normal;
-            font-size: 0.7rem;
+            font-size: 1.2rem;
         }
     
         .text_sec_card_long_middle{
             font-weight: normal;
-            font-size: 0.7rem;
+            font-size: 1.2rem;
         }
     
         .text_sec_card_long_right{
             font-weight: normal;
-            font-size: 0.7rem;
+            font-size: 1.2rem;
         }
 
         /* #link_list{
             right: -130px;
         } */
-
-        #grid_wrapper_2{
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 150px 4800px 100px;
-            grid-template-areas:
-            "he"
-            "ma"
-            ;
-        }
-
-        #main{
-            grid-area: ma;
-            width: 100%;
-            height: 4800px;
-            display: grid;
-            background-color: #fffdd0;
-            grid-template-columns: 100%;
-            grid-template-rows: 5% 95%;
-            grid-template-areas:
-            "te"
-            "sh"
-            "fo"
-            ;
-        }
 
         #text_main{
             font-size: 3rem;
@@ -1340,10 +1560,34 @@ nav{
             font-size: 1.4rem;
             text-align:center;
         }
+
+        #snickers_info_text_top_2{
+            right: 0;
+            width: 350px;
+            font-size: 1.4rem;
+            text-align:center;
+        }
         
         #snickers_info_text{
             right: 0;
+            height: 390px;
             width: 350px;
+            font-size: 1.2rem;
+            text-align:center;
+        }
+
+        #snickers_info_text_2{
+            height: 480px;
+            right: 0;
+            width: 100%;
+            font-size: 1.2rem;
+            text-align:center;
+        }
+
+        #snickers_info_text_2_2{
+            height: 550px;
+            right: 0;
+            width: 100%;
             font-size: 1.2rem;
             text-align:center;
         }
