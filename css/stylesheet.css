@@ -60,6 +60,9 @@ nav{
     flex-direction: row;
     list-style: none;
     z-index: 0;
+    height: auto;
+    border: thin solid;
+    border-color: #fffdd0;
 }
 
 #home{
@@ -391,6 +394,7 @@ nav{
 }
 
 #grid_wrapper_2{
+    width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 150px 40px auto;
@@ -412,8 +416,6 @@ nav{
 }
 
 #main{
-    width:fit-content;
-    height:fit-content;
     grid-area: ma;
     display: flex;
     flex-direction: column;
@@ -438,7 +440,7 @@ nav{
 }
 
 #main_cards{
-    width: 100%;
+    object-fit: cover;
     height: 100%;
     background-color: #fffdd0;
     display: flex;
@@ -623,10 +625,6 @@ nav{
     padding-left: -20%;
 }
 
-#img_snickers_old{
-    /* width: 800px; */
-}
-
 #info_snicker_container_2{
     height:800px;
     display: flex;
@@ -643,7 +641,7 @@ nav{
     width: 100%;
 }
 
-#snickers_info_text_2{
+.snickers_info_text_2{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -655,7 +653,7 @@ nav{
     color: #ffffff;
 }
 
-#snickers_info_text_2_2{
+.snickers_info_text_2_2{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -680,10 +678,9 @@ nav{
 #img_snickers_horse{
     max-width: 100%;
     max-height: 100%;
-    padding-left: 30%;
 }
 
-#snickers_info_text_top_2{
+.snickers_info_text_top_2{
     width: 100%;
     font-size: 2rem;
     font-weight:bold;
@@ -703,13 +700,14 @@ nav{
     max-height: 100%;
 }
 
-#snickers_info_text_top{
+.snickers_info_text_top{
     width: 100%;
     font-size: 2rem;
     font-weight:bold;
     color: #fffdd0;
     text-align: left;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     text-decoration: underline;
 }
 
@@ -720,7 +718,7 @@ nav{
     height: 100px;
 }
 
-#snickers_info_text{
+.snickers_info_text{
     display: flex;
     flex-wrap: wrap;
     width: 750px;
@@ -875,12 +873,34 @@ nav{
     text-decoration:underline;
 }
 
-#icon_container_max{
+.icon_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon_container_arrow{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon_container_max{
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    max-height: 30%;
+    max-height: 200px;
+    z-index: 1;
+}
+
+.icon_container_max_arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 50px;
+    z-index: 1;
 }
 
 .text_sec_card_left{
@@ -920,12 +940,12 @@ nav{
 
 .text_sec_card_long_left{
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #f5f5f5;
     text-decoration: none;
     text-align:left;
     line-height: 1;
-    font-weight: bold;
+    font-weight: unset;
     letter-spacing: 0.348rem;
     z-index: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -934,12 +954,12 @@ nav{
 
 .text_sec_card_long_middle{
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #f5f5f5;
     text-decoration: none;
     text-align:center;
     line-height: 1;
-    font-weight: bold;
+    font-weight: unset;
     letter-spacing: 0.348rem;
     z-index: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -947,12 +967,12 @@ nav{
 
 .text_sec_card_long_right{
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #000000;
     text-decoration: none;
     text-align:right;
     line-height: 1;
-    font-weight: bold;
+    font-weight:unset;
     letter-spacing: 0.348rem;
     z-index: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -1038,7 +1058,6 @@ nav{
     background-color: #fffdd0;
     border-radius: 1px;
     border: double;
-
 }
 
 #section_left{
@@ -1082,18 +1101,10 @@ nav{
     display: none;
 }
 
-#icon_container{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-}
-
 @media screen and (max-width: 845px){
 
     #images_history_container{
-        height: fit-content;
+        height:fit-content;
         width: 60%;
     }
 
@@ -1207,8 +1218,7 @@ nav{
     }
 
     #grid_wrapper_2{
-        width: fit-content;
-        height: 5200px;
+        max-width: 98%;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 150px auto;
@@ -1216,6 +1226,7 @@ nav{
         "he"
         "ma"
         ;
+        max-height: 200px;
     }
 
     /* .link_list_visible{
@@ -1338,59 +1349,56 @@ nav{
         left: 0;
     }
 
-    #snickers_info_text_top{
+    .snickers_info_text_top{
         right: 0;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         text-align:center;
     }
 
-    #snickers_info_text_top_2{
+    .snickers_info_text_top_2{
         right: 0;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         text-align:center;
         position: relative;
         top: 10px;
     }
 
-    #card_8{
-        width: 23rem;
-    }
-
     .cards{
-        width: 23rem;
+        max-width: 22rem;
     }
 
     .cards_2{
-        width: 23rem;
+        max-width: 22rem;
     }
 
     .cards_3{
-        width: 23rem;
+       max-width: 22rem;
     }
 
     .cards_4{
-        width: 23rem;
+        max-width: 22rem;
     }
     
-    #snickers_info_text{
+    .snickers_info_text{
+        height: 200px;
         width: 750px;
         right: 0;
         width: fit-content;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align:center;
     }
 
-    #snickers_info_text_2{
+    .snickers_info_text_2{
         right: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align:center;
         width: 100%;
         height: 600px;
     }
 
-    #snickers_info_text_2_2{
+    .snickers_info_text_2_2{
         right: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align:center;
         width: 100%;
         height: 600px;
@@ -1422,21 +1430,21 @@ nav{
 
     .text_sec_card_left{
         text-align: center;
-        font-weight: normal;
+        font-weight: bold;
         font-size: 2rem;
         flex-wrap: wrap;
     }
 
     .text_sec_card_middle{
         text-align: center;
-        font-weight: normal;
+        font-weight: bold;
         font-size: 2rem;
         flex-wrap: wrap;
     }
 
     .text_sec_card_right{
         text-align: center;
-        font-weight: normal;
+        font-weight: bold;
         font-size: 2rem;
         flex-wrap: wrap;
     }
@@ -1487,9 +1495,10 @@ nav{
     @media screen and (max-width: 760px){
 
         #grid_wrapper_4{
+            min-height:fit-content;
             display: grid;
             grid-template-columns: 33%, 34%, 33%;
-            grid-template-rows: 150px 200px 110vh 110vh 110vh 100px;
+            grid-template-rows: 150px 200px auto auto auto 100px;
             grid-template-areas:
             "he he he"
             "setk setk setk"
@@ -1500,25 +1509,56 @@ nav{
             ;
         }
 
+        #section_left_card{
+            min-height:125vh;
+        }
+
+        #section_middle_card{
+            min-height:125vh;
+        }
+
+        #section_right_card{
+            min-height:125vh;
+        }
+
+        .section_ask{
+            min-height: 135vh;
+        }
+
+        #footer{
+            height: fit-content;
+        }
+
+        #header_text{
+            width: 220px;
+            height: 50px;
+            font-size: 2.5em;
+        }
+
         #grid_wrapper_test{
             min-width:370px;
         }
 
         .text_sec_card_left{
             font-weight: normal;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             flex-wrap: wrap;
         }
     
         .text_sec_card_middle{
             font-weight: normal;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             flex-wrap: wrap;
+        }
+
+        .img_container{
+            object-fit:fill;
+            width:278px;
         }
     
         .text_sec_card_right{
             font-weight: normal;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             flex-wrap: wrap;
         }
 
@@ -1529,17 +1569,32 @@ nav{
 
         .text_sec_card_long_left{
             font-weight: normal;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     
         .text_sec_card_long_middle{
             font-weight: normal;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     
         .text_sec_card_long_right{
             font-weight: normal;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .text_sec_card_left{
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    
+        .text_sec_card_middle{
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    
+        .text_sec_card_right{
+            font-weight: bold;
+            font-size: 1.3rem;
         }
 
         /* #link_list{
@@ -1574,21 +1629,21 @@ nav{
             width: 350px;
         }
 
-        #snickers_info_text_top{
+        .snickers_info_text_top{
             right: 0;
             width: 350px;
             font-size: 1.4rem;
             text-align:center;
         }
 
-        #snickers_info_text_top_2{
+        .snickers_info_text_top_2{
             right: 0;
             width: 350px;
             font-size: 1.4rem;
             text-align:center;
         }
         
-        #snickers_info_text{
+        .snickers_info_text{
             right: 0;
             height: 390px;
             width: 350px;
@@ -1596,15 +1651,15 @@ nav{
             text-align:center;
         }
 
-        #snickers_info_text_2{
+        .snickers_info_text_2{
             height: 480px;
             right: 0;
             width: 100%;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-align:center;
         }
 
-        #snickers_info_text_2_2{
+        .snickers_info_text_2_2{
             height: 550px;
             right: 0;
             width: 100%;
