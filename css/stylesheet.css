@@ -672,6 +672,7 @@ nav{
     justify-content: space-evenly;
     height: 100%;
     width: 30%;
+    margin-top: 5%;
 }
 
 
@@ -687,6 +688,8 @@ nav{
     color: #fffdd0;
     text-align: left;
     text-decoration: underline;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #img_snickers_original{
@@ -706,8 +709,8 @@ nav{
     font-weight:bold;
     color: #fffdd0;
     text-align: left;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     text-decoration: underline;
 }
 
