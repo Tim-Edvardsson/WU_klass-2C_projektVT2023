@@ -1316,7 +1316,7 @@ nav{
     }
 
     #info_snicker_container{
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-evenly;
     }
 
@@ -1350,6 +1350,26 @@ nav{
         text-align:center;
         position: relative;
         top: 10px;
+    }
+
+    #card_8{
+        width: 23rem;
+    }
+
+    .cards{
+        width: 23rem;
+    }
+
+    .cards_2{
+        width: 23rem;
+    }
+
+    .cards_3{
+        width: 23rem;
+    }
+
+    .cards_4{
+        width: 23rem;
     }
     
     #snickers_info_text{
